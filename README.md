@@ -53,26 +53,32 @@ O serviço é decorado com o @Injectable e é fornecido no escopo raiz, o que si
 O serviço possui uma propriedade chamada baseApiUrl que armazena a URL base para a API RESTful, obtida do arquivo environment.ts.
 
 ##### O serviço possui métodos para executar as seguintes operações na API RESTful:
-getAllPessoas(): retorna um Observable de uma matriz de objetos Pessoa, que é obtido ao enviar uma solicitação GET para a URL da API this.baseApiUrl + '/api/Pessoa'.
-addPessoa(addPessoaRequest: Pessoa): cria uma nova pessoa enviando uma solicitação POST para a URL da API this.baseApiUrl + '/api/Pessoa' com a pessoa a ser adicionada como corpo da solicitação. O método retorna um Observable que emite a pessoa adicionada.
-getPessoa(id: string): retorna um Observable de um objeto Pessoa específico obtido ao enviar uma solicitação GET para a URL da API this.baseApiUrl + '/api/Pessoa/' + id.
-updatePessoa(id: string, updatedPessoaRequest: Pessoa): atualiza uma pessoa existente enviando uma solicitação PUT para a URL da API this.baseApiUrl + '/api/Pessoa/' + id com a pessoa atualizada como corpo da solicitação. O método retorna um Observable que emite a pessoa atualizada.
-deletePessoa(id: string): exclui uma pessoa existente enviando uma solicitação DELETE para a URL da API this.baseApiUrl + '/api/Pessoa/' + id. O método retorna um Observable que emite a pessoa excluída.
+- getAllPessoas(): retorna um Observable de uma matriz de objetos Pessoa, que é obtido ao enviar uma solicitação GET para a URL da 
+- API this.baseApiUrl + '/api/Pessoa'.
+- addPessoa(addPessoaRequest: Pessoa): cria uma nova pessoa enviando uma solicitação POST para a URL da API 
+- this.baseApiUrl + '/api/Pessoa' com a pessoa a ser adicionada como corpo da solicitação. O método retorna um Observable que emite a pessoa adicionada.
+- getPessoa(id: string): retorna um Observable de um objeto Pessoa específico obtido ao enviar uma solicitação GET para a URL da API 
+- this.baseApiUrl + '/api/Pessoa/' + id.
+- updatePessoa(id: string, updatedPessoaRequest: Pessoa): atualiza uma pessoa existente enviando uma solicitação PUT para a URL da API 
+- this.baseApiUrl + '/api/Pessoa/' + id com a pessoa atualizada como corpo da solicitação. O método retorna um Observable que emite a pessoa atualizada.
+- deletePessoa(id: string): exclui uma pessoa existente enviando uma solicitação DELETE para a URL da API 
+- this.baseApiUrl + '/api/Pessoa/' + id. O método retorna um Observable que emite a pessoa excluída.
 
 ##### O Automovelservices.ts é um serviço Angular para gerenciar a comunicação com um backend que fornece dados de automóveis. 
 Ele importa o módulo HttpClient e as interfaces Observable e HttpHeaders, e utiliza a injeção de dependência do Angular.
 
 O serviço possui um construtor que recebe o HttpClient e armazena a URL base da API em baseApiUrl. O serviço fornece vários métodos para consumir endpoints da API, incluindo:
 
-getAllAutomovel(): que realiza uma solicitação HTTP GET para recuperar uma lista de objetos Automovel do endpoint /api/Automovel.
+- getAllAutomovel(): que realiza uma solicitação HTTP GET para recuperar uma lista de objetos Automovel do endpoint /api/Automovel.
 
-addAutomovel(addAutomovelRequest: Automovel): que realiza uma solicitação HTTP POST para adicionar um objeto Automovel ao endpoint /api/Automovel. O objeto é passado como parâmetro.
+- addAutomovel(addAutomovelRequest: Automovel): que realiza uma solicitação HTTP POST para adicionar um objeto Automovel ao endpoint /api/Automovel. 
+O objeto é passado como parâmetro.
 
-getAutomovel(id: string): que realiza uma solicitação HTTP GET para recuperar um objeto Automovel específico do endpoint /api/Automovel/id, onde id é passado como parâmetro.
+- getAutomovel(id: string): que realiza uma solicitação HTTP GET para recuperar um objeto Automovel específico do endpoint /api/Automovel/id, onde id é passado como parâmetro.
 
-updateAutomovel(id: string, updatedAutomovelRequest: Automovel): que realiza uma solicitação HTTP PUT para atualizar um objeto Automovel específico no endpoint /api/Automovel/id, onde id é passado como parâmetro. O objeto atualizado é passado como parâmetro.
+- updateAutomovel(id: string, updatedAutomovelRequest: Automovel): que realiza uma solicitação HTTP PUT para atualizar um objeto Automovel específico no endpoint /api/Automovel/id, onde id é passado como parâmetro. O objeto atualizado é passado como parâmetro.
 
-deleteAutomovel(id: string): que realiza uma solicitação HTTP DELETE para remover um objeto Automovel específico do endpoint /api/Automovel/id, onde id é passado como parâmetro.
+- deleteAutomovel(id: string): que realiza uma solicitação HTTP DELETE para remover um objeto Automovel específico do endpoint /api/Automovel/id, onde id é passado como parâmetro.
 
 
 # Backend TS
@@ -97,11 +103,11 @@ Este é um controlador ASP.NET Core MVC que manipula a entidade "Pessoa" em um a
 
 O PessoaController.ts é O controlador define as seguintes rotas:
 
-GET api/Pessoa: retorna uma lista de todas as pessoas no banco de dados.
-GET api/Pessoa/{id}: retorna uma pessoa específica com base no ID fornecido.
-POST api/Pessoa: cria uma nova pessoa com base nos dados fornecidos no corpo da solicitação.
-PUT api/Pessoa/{id}: atualiza uma pessoa existente com base no ID fornecido e nos dados fornecidos no corpo da solicitação.
-DELETE api/Pessoa/{id}: exclui uma pessoa existente com base no ID fornecido.
+- GET api/Pessoa: retorna uma lista de todas as pessoas no banco de dados.
+- GET api/Pessoa/{id}: retorna uma pessoa específica com base no ID fornecido.
+- POST api/Pessoa: cria uma nova pessoa com base nos dados fornecidos no corpo da solicitação.
+- PUT api/Pessoa/{id}: atualiza uma pessoa existente com base no ID fornecido e nos dados fornecidos no corpo da solicitação.
+- DELETE api/Pessoa/{id}: exclui uma pessoa existente com base no ID fornecido.
 
 ##### Dependências
 O controlador depende de um objeto FullStackDbWContext para se comunicar com o banco de dados. O objeto FullStackDbContext é injetado por meio do construtor do controlador.
