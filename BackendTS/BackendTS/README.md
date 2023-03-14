@@ -1,49 +1,49 @@
 # Backend TS
 
-Codificação usando DonetCore 6.0 programado em C# com uso de Framework Microsoft Entity Framework para facilitar implementaçao do código.
+CodificaÃ§Ã£o usando DonetCore 6.0 programado em C# com uso de Framework Microsoft Entity Framework para facilitar implementaÃ§ao do cÃ³digo.
 
-# Para rodar a aplicação é necessário instalar os seguintes pacotes:
-Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.Migrations, Microsoft SQL isso pode ser feito através do Gerenciador de Pacotes do Visual Studio o NuGet
+# Para rodar a aplicaÃ§Ã£o Ã© necessÃ¡rio instalar os seguintes pacotes:
+Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.Migrations, Microsoft SQL isso pode ser feito atravÃ©s do Gerenciador de Pacotes do Visual Studio o NuGet
 
-Depois de instalado é necessário seguintes comandos no Backend. Abra o terminal Package Manager Console e rode os comandos:
+Depois de instalado Ã© necessÃ¡rio seguintes comandos no Backend. Abra o terminal Package Manager Console e rode os comandos:
 
 dotnet build
 dotnet restore
 dotnet ef database update --project BackendTS
-Esse útimo comando vai subir as tabelas para o Banco de dados Microsoft SQL e lógico é necessário verificar se não existe nenhum erro na migrations ou no mesmo no código.
+Esse Ãºtimo comando vai subir as tabelas para o Banco de dados Microsoft SQL e lÃ³gico Ã© necessÃ¡rio verificar se nÃ£o existe nenhum erro na migrations ou no mesmo no cÃ³digo.
 
-# Segue uma breve descrição de como funciona os Controller dentro do Backend:
+# Segue uma breve descriÃ§Ã£o de como funciona os Controller dentro do Backend:
 
 Controller de Pessoa
-Este é um controlador ASP.NET Core MVC que manipula a entidade "Pessoa" em um aplicativo de Backend. O controlador define endpoints HTTP para criar, ler, atualizar e excluir pessoas no banco de dados.
+Este Ã© um controlador ASP.NET Core MVC que manipula a entidade "Pessoa" em um aplicativo de Backend. O controlador define endpoints HTTP para criar, ler, atualizar e excluir pessoas no banco de dados.
 
-O PessoaController.ts é O controlador define as seguintes rotas:
+O PessoaController.ts Ã© O controlador define as seguintes rotas:
 
-# GET api/Pessoa: retorna uma lista de todas as pessoas no banco de dados.
-# GET api/Pessoa/{id}: retorna uma pessoa específica com base no ID fornecido.
-# POST api/Pessoa: cria uma nova pessoa com base nos dados fornecidos no corpo da solicitação.
-# PUT api/Pessoa/{id}: atualiza uma pessoa existente com base no ID fornecido e nos dados fornecidos no corpo da solicitação.
-# DELETE api/Pessoa/{id}: exclui uma pessoa existente com base no ID fornecido.
+- GET api/Pessoa: retorna uma lista de todas as pessoas no banco de dados.
+- GET api/Pessoa/{id}: retorna uma pessoa especÃ­fica com base no ID fornecido.
+- POST api/Pessoa: cria uma nova pessoa com base nos dados fornecidos no corpo da solicitaÃ§Ã£o.
+- PUT api/Pessoa/{id}: atualiza uma pessoa existente com base no ID fornecido e nos dados fornecidos no corpo da solicitaÃ§Ã£o.
+- DELETE api/Pessoa/{id}: exclui uma pessoa existente com base no ID fornecido.
 
-# Dependências
-O controlador depende de um objeto FullStackDbWContext para se comunicar com o banco de dados. O objeto FullStackDbContext é injetado por meio do construtor do controlador.
+# DependÃªncias
+O controlador depende de um objeto FullStackDbWContext para se comunicar com o banco de dados. O objeto FullStackDbContext Ã© injetado por meio do construtor do controlador.
 
-# Utilização
-O controlador pode ser usado como parte de um aplicativo ASP.NET Core. Para usar o controlador, basta configurar as rotas apropriadas no arquivo Startup.cs do aplicativo e injetar as dependências necessárias no construtor do controlador.
+# UtilizaÃ§Ã£o
+O controlador pode ser usado como parte de um aplicativo ASP.NET Core. Para usar o controlador, basta configurar as rotas apropriadas no arquivo Startup.cs do aplicativo e injetar as dependÃªncias necessÃ¡rias no construtor do controlador.
 
-# Descrição do Controller Automovel
-O AutomovelController é um controlador ASP.NET Core que trata requisições HTTP para gerenciar informações sobre automóveis. Ele é responsável por acessar e manipular informações armazenadas no banco de dados FullStackDbContext, que é injetado por meio de sua construtora.
+# DescriÃ§Ã£o do Controller Automovel
+O AutomovelController Ã© um controlador ASP.NET Core que trata requisiÃ§Ãµes HTTP para gerenciar informaÃ§Ãµes sobre automÃ³veis. Ele Ã© responsÃ¡vel por acessar e manipular informaÃ§Ãµes armazenadas no banco de dados FullStackDbContext, que Ã© injetado por meio de sua construtora.
 
-O controlador possui as seguintes rotas e métodos HTTP:
+O controlador possui as seguintes rotas e mÃ©todos HTTP:
 
-# GET api/Automovel: Retorna todos os automóveis armazenados no banco de dados.
+- GET api/Automovel: Retorna todos os automÃ³veis armazenados no banco de dados.
 
-# POST api/Automovel: Adiciona um novo automóvel no banco de dados com as informações passadas no corpo da requisição.
+- POST api/Automovel: Adiciona um novo automÃ³vel no banco de dados com as informaÃ§Ãµes passadas no corpo da requisiÃ§Ã£o.
 
-# GET api/Automovel/{id}: Retorna o automóvel com o id especificado na rota. Se não existir um automóvel com esse id, retorna um código de resposta HTTP 404 (not found).
+- GET api/Automovel/{id}: Retorna o automÃ³vel com o id especificado na rota. Se nÃ£o existir um automÃ³vel com esse id, retorna um cÃ³digo de resposta HTTP 404 (not found).
 
-# PUT api/Automovel/{id}: Atualiza as informações do automóvel com o id especificado na rota com as informações passadas no corpo da requisição. Se não existir um automóvel com esse id, retorna um código de resposta HTTP 404 (not found).
+- PUT api/Automovel/{id}: Atualiza as informaÃ§Ãµes do automÃ³vel com o id especificado na rota com as informaÃ§Ãµes passadas no corpo da requisiÃ§Ã£o. Se nÃ£o existir um automÃ³vel com esse id, retorna um cÃ³digo de resposta HTTP 404 (not found).
 
-# DELETE api/Automovel/{id}: Remove o automóvel com o id especificado na rota do banco de dados. Se não existir um automóvel com esse id, retorna um código de resposta HTTP 404 (not found).
+- DELETE api/Automovel/{id}: Remove o automÃ³vel com o id especificado na rota do banco de dados. Se nÃ£o existir um automÃ³vel com esse id, retorna um cÃ³digo de resposta HTTP 404 (not found).
 
-O controlador utiliza a classe Automovel como modelo para representar os dados dos automóveis, e todas as operações de acesso ao banco de dados são feitas de forma assíncrona.
+O controlador utiliza a classe Automovel como modelo para representar os dados dos automÃ³veis, e todas as operaÃ§Ãµes de acesso ao banco de dados sÃ£o feitas de forma assÃ­ncrona.
