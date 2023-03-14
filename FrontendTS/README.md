@@ -1,6 +1,6 @@
 # Frontend TS
 
-Codificação em Angular programando em TypeScript para consumo de Backend programado em C# com Banco de Dados Microsoft SQL.
+Codificação em Angular programado em TypeScript para consumo de Backend programado em C# com Banco de Dados Microsoft SQL.
 Uso de biblioteca para customizar o Frontend com Material, NgPrime, NgBootstrap.
 
 O componente AddPessoaComponent, apresentado é um componente em Angular chamado que é responsável por exibir uma interface para adicionar novas pessoas ao sistema. Ele é composto por uma classe com variáveis, métodos e um construtor.
