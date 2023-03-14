@@ -80,11 +80,11 @@ Este é um controlador ASP.NET Core MVC que manipula a entidade "Pessoa" em um a
 
 O PessoaController.ts é O controlador define as seguintes rotas:
 
-# GET api/Pessoa: retorna uma lista de todas as pessoas no banco de dados.
-# GET api/Pessoa/{id}: retorna uma pessoa específica com base no ID fornecido.
-# POST api/Pessoa: cria uma nova pessoa com base nos dados fornecidos no corpo da solicitação.
-# PUT api/Pessoa/{id}: atualiza uma pessoa existente com base no ID fornecido e nos dados fornecidos no corpo da solicitação.
-# DELETE api/Pessoa/{id}: exclui uma pessoa existente com base no ID fornecido.
+GET api/Pessoa: retorna uma lista de todas as pessoas no banco de dados.
+GET api/Pessoa/{id}: retorna uma pessoa específica com base no ID fornecido.
+POST api/Pessoa: cria uma nova pessoa com base nos dados fornecidos no corpo da solicitação.
+PUT api/Pessoa/{id}: atualiza uma pessoa existente com base no ID fornecido e nos dados fornecidos no corpo da solicitação.
+DELETE api/Pessoa/{id}: exclui uma pessoa existente com base no ID fornecido.
 
 # Dependências
 O controlador depende de um objeto FullStackDbWContext para se comunicar com o banco de dados. O objeto FullStackDbContext é injetado por meio do construtor do controlador.
@@ -97,14 +97,14 @@ O AutomovelController é um controlador ASP.NET Core que trata requisições HTT
 
 O controlador possui as seguintes rotas e métodos HTTP:
 
-# GET api/Automovel: Retorna todos os automóveis armazenados no banco de dados.
+GET api/Automovel: Retorna todos os automóveis armazenados no banco de dados.
 
-# POST api/Automovel: Adiciona um novo automóvel no banco de dados com as informações passadas no corpo da requisição.
+POST api/Automovel: Adiciona um novo automóvel no banco de dados com as informações passadas no corpo da requisição.
 
-# GET api/Automovel/{id}: Retorna o automóvel com o id especificado na rota. Se não existir um automóvel com esse id, retorna um código de resposta HTTP 404 (not found).
+GET api/Automovel/{id}: Retorna o automóvel com o id especificado na rota. Se não existir um automóvel com esse id, retorna um código de resposta HTTP 404 (not found).
 
-# PUT api/Automovel/{id}: Atualiza as informações do automóvel com o id especificado na rota com as informações passadas no corpo da requisição. Se não existir um automóvel com esse id, retorna um código de resposta HTTP 404 (not found).
+PUT api/Automovel/{id}: Atualiza as informações do automóvel com o id especificado na rota com as informações passadas no corpo da requisição. Se não existir um automóvel com esse id, retorna um código de resposta HTTP 404 (not found).
 
-# DELETE api/Automovel/{id}: Remove o automóvel com o id especificado na rota do banco de dados. Se não existir um automóvel com esse id, retorna um código de resposta HTTP 404 (not found).
+DELETE api/Automovel/{id}: Remove o automóvel com o id especificado na rota do banco de dados. Se não existir um automóvel com esse id, retorna um código de resposta HTTP 404 (not found).
 
 O controlador utiliza a classe Automovel como modelo para representar os dados dos automóveis, e todas as operações de acesso ao banco de dados são feitas de forma assíncrona.
