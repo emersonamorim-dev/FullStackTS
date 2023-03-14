@@ -33,7 +33,7 @@ findIndexById() - que é executado para encontrar o índice da pessoa na lista d
 createId() - que é executado para gerar um ID aleatório para uma nova pessoa.
 
 
-# O que faz o PessoasService.ts
+### O que faz o PessoasService.ts
 o código chamdo como Pessoaservices em Angular  é responsável por realizar operações CRUD (criação, leitura, atualização e exclusão) na API RESTful relacionada às entidades Pessoa.
 
 O serviço importa o HttpClient e HttpHeaders do pacote @angular/common/http e o Observable do pacote rxjs. Ele também importa a classe Pessoa do modelo Pessoa, que é definido em outro arquivo.
@@ -96,7 +96,7 @@ DELETE api/Pessoa/{id}: exclui uma pessoa existente com base no ID fornecido.
 ### Dependências
 O controlador depende de um objeto FullStackDbWContext para se comunicar com o banco de dados. O objeto FullStackDbContext é injetado por meio do construtor do controlador.
 
-# Utilização
+### Utilização
 O controlador pode ser usado como parte de um aplicativo ASP.NET Core. Para usar o controlador, basta configurar as rotas apropriadas no arquivo Startup.cs do aplicativo e injetar as dependências necessárias no construtor do controlador.
 
 ### Descrição do Controller Automovel
