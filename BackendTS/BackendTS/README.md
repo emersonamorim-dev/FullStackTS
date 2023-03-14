@@ -7,9 +7,10 @@ Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.Migrations, Microso
 
 Depois de instalado é necessário seguintes comandos no Backend. Abra o terminal Package Manager Console e rode os comandos:
 
-dotnet build
-dotnet restore
-dotnet ef database update --project BackendTS
+- dotnet build
+- dotnet restore
+- dotnet ef database update --project BackendTS
+- 
 Esse útimo comando vai subir as tabelas para o Banco de dados Microsoft SQL e lógico é necessário verificar se não existe nenhum erro na migrations ou no mesmo no código.
 
 # Segue uma breve descrição de como funciona os Controller dentro do Backend:
