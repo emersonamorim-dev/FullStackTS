@@ -8,8 +8,10 @@ O componente AddPessoaComponent, apresentado é um componente em Angular chamado
 Para rodar a applicação é necessário configurar IP do Backend em: environment.ts
 
 # Depois de feito isso basta rodar:
-npm install
-ng serve
+- npm install
+- npm install primeng --save
+- npm install primeicons --save
+- ng serve
 
 # Algumas das variáveis presentes na classe incluem:
 
@@ -54,13 +56,13 @@ Ele importa o módulo HttpClient e as interfaces Observable e HttpHeaders, e uti
 
 O serviço possui um construtor que recebe o HttpClient e armazena a URL base da API em baseApiUrl. O serviço fornece vários métodos para consumir endpoints da API, incluindo:
 
-getAllAutomovel(): que realiza uma solicitação HTTP GET para recuperar uma lista de objetos Automovel do endpoint /api/Automovel.
+- getAllAutomovel(): que realiza uma solicitação HTTP GET para recuperar uma lista de objetos Automovel do endpoint /api/Automovel.
 
-addAutomovel(addAutomovelRequest: Automovel): que realiza uma solicitação HTTP POST para adicionar um objeto Automovel ao endpoint /api/Automovel. O objeto é passado como parâmetro.
+- addAutomovel(addAutomovelRequest: Automovel): que realiza uma solicitação HTTP POST para adicionar um objeto Automovel ao endpoint /api/Automovel. O objeto é passado como parâmetro.
 
-getAutomovel(id: string): que realiza uma solicitação HTTP GET para recuperar um objeto Automovel específico do endpoint /api/Automovel/id, onde id é passado como parâmetro.
+- getAutomovel(id: string): que realiza uma solicitação HTTP GET para recuperar um objeto Automovel específico do endpoint /api/Automovel/id, onde id é passado como parâmetro.
 
-updateAutomovel(id: string, updatedAutomovelRequest: Automovel): que realiza uma solicitação HTTP PUT para atualizar um objeto Automovel específico no endpoint /api/Automovel/id, onde id é passado como parâmetro. O objeto atualizado é passado como parâmetro.
+- updateAutomovel(id: string, updatedAutomovelRequest: Automovel): que realiza uma solicitação HTTP PUT para atualizar um objeto Automovel específico no endpoint /api/Automovel/id, onde id é passado como parâmetro. O objeto atualizado é passado como parâmetro.
 
-deleteAutomovel(id: string): que realiza uma solicitação HTTP DELETE para remover um objeto Automovel específico do endpoint /api/Automovel/id, onde id é passado como parâmetro.
+- deleteAutomovel(id: string): que realiza uma solicitação HTTP DELETE para remover um objeto Automovel específico do endpoint /api/Automovel/id, onde id é passado como parâmetro.
 
