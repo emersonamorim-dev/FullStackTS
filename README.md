@@ -3,6 +3,12 @@
 Codificação em Angular programando em TypeScript para consumo de Backend programado em C# com Banco de Dados Microsoft SQL.
 Uso de biblioteca para customizar o Frontend com Material, NgPrime, NgBootstrap.
 
+# Depois de feito isso basta rodar:
+# npm install
+# npm install primeng --save
+# npm install primeicons --save
+ng serve
+
 O componente AddPessoaComponent, apresentado é um componente em Angular chamado que é responsável por exibir uma interface para adicionar novas pessoas ao sistema. Ele é composto por uma classe com variáveis, métodos e um construtor.
 
 # Algumas das variáveis presentes na classe incluem:
@@ -68,9 +74,10 @@ Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.Migrations, Microso
 
 Depois de instalado é necessário seguintes comandos no Backend. Abra o terminal Package Manager Console e rode os comandos:
 
-dotnet build
-dotnet restore
-dotnet ef database update --project BackendTS
+# dotnet build
+# dotnet restore
+# dotnet ef database update --project BackendTS
+
 Esse útimo comando vai subir as tabelas para o Banco de dados Microsoft SQL e lógico é necessário verificar se não existe nenhum erro na migrations ou no mesmo no código.
 
 # Segue uma breve descrição de como funciona os Controller dentro do Backend:
