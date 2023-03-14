@@ -1,0 +1,95 @@
+<p-toast></p-toast>
+
+<div class="card">
+    <p-toolbar styleClass="p-mb-4">
+        <ng-template pTemplate="left">
+
+        </ng-template>
+
+        <ng-template pTemplate="right">
+
+
+        </ng-template>
+    </p-toolbar>
+
+    <p-table #dt [value]="pessoa" [rows]="10" [paginator]="true" [globalFilterFields]="['name','country.name','representative.name','status']"
+        [(selection)]="selectedPessoas" [rowHover]="true" dataKey="id"
+        currentPageReportTemplate="Mostrando {first} para {last} de {totalRecords} entradas" [showCurrentPageReport]="true">
+        <ng-template pTemplate="caption">
+            <div class="p-d-flex p-ai-center p-jc-between">
+                <h5 class="p-m-0">LISTA DE PESSOAS</h5>
+                <span class="p-input-icon-left">
+                    <i class="pi pi-search"></i>
+
+                </span>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width: 3rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th pSortableColumn="name">NOME <p-sortIcon field="nome"></p-sortIcon></th>
+                <th pSortableColumn="price">CPF <p-sortIcon field="cpf"></p-sortIcon></th>
+                <th pSortableColumn="price">ESTADO <p-sortIcon field="estado"></p-sortIcon></th>
+                <th pSortableColumn="inventoryStatus">Status <p-sortIcon field="inventoryStatus"></p-sortIcon></th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr *ngFor="let item of pessoa">
+                <td>
+
+                </td>
+                <td>{{item.nome}}</td>
+                <td>{{item.cpf}}</td>
+                <td>{{item.estado}}</td>
+                <td>
+                    <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" (click)="editAutomovel(automovels)"></button>
+                    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteAutomovel(automovels)"></button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="p-d-flex p-ai-center p-jc-between">
+
+            </div>
+        </ng-template>
+    </p-table>
+</div>
+
+<form #form="ngForm" (ngSubmit)="addPessoa()">
+  <p-dialog [(visible)]="pessoaDialog" [style]="{width: '450px'}" header="Cadastro Pessoas" [modal]="true" styleClass="p-fluid">
+      <ng-template pTemplate="content">
+          <div class="p-field">
+
+              <label for="name">NOME:</label>
+              <input type="text" pInputText class="form-control" id="nome" name="nome" [(ngModel)]="addPessoaRequest.nome">
+
+          </div>
+          <div class="p-field">
+              <label for="cpf">CPF:</label>
+              <input type="text" pInputText class="form-control" id="cpf" name="cpf" [(ngModel)]="addPessoaRequest.cpf">
+
+          </div>
+
+          <div class="p-field">
+            <label for="cpf">ESTADO:</label>
+            <input type="text" pInputText class="form-control" id="estado" name="estado" [(ngModel)]="addPessoaRequest.estado">
+
+        </div>
+
+      </ng-template>
+
+      <ng-template pTemplate="footer">
+        <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text"
+        (click)="hideDialog()"></button>
+        <button pButton pRipple label="Salvar" icon="pi pi-check" class="p-button-text"></button>
+    </ng-template>
+
+
+</p-dialog>
+
+</form>
+
+<p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>

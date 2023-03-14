@@ -1,0 +1,40 @@
+<div class="container my-5">
+  <h1 class="mb-3">Editar Automóvel</h1>
+  <div class="row">
+      <div class="col-6">
+          <form #form="ngForm" [formGroup]="editAutomovelForm" (ngSubmit)="updateAutomovel()">
+              <div class="mb-3">
+                  <label for="id" class="form-label">Id</label>
+                  <input type="text" class="form-control" id="id" readonly
+                  name="id" [(ngModel)]="automovelDetails.id" formControlName="Id" >
+              </div>
+              <div class="mb-3">
+                  <label for="placa" class="form-label">Placa</label>
+                  <input type="text" class="form-control" id="placa"
+                  name="placa" [(ngModel)]="automovelDetails.placa"
+                  formControlName="Placa"
+                  [ngClass]="{'is-invalid': (editAutomovelForm.get('Placa')?.touched || editAutomovelForm.get('Placa')?.dirty) && !editAutomovelForm.get('Placa')?.valid}">
+                  <span class="invalid-feedback">
+                      <span *ngIf="editAutomovelForm.get('Placa')?.errors?.['required']">Placa não pode ficar em branco.</span>
+                  </span>
+              </div>
+              <div class="mb-3">
+                  <label for="veiculo" class="form-label">Veículo</label>
+                  <input type="email" class="form-control" id="veiculo"
+                  name="veiculo" [(ngModel)]="automovelDetails.veiculo"
+                  formControlName="Veiculo"
+                  [ngClass]="{'is-invalid': (editAutomovelForm.get('Veiculo')?.touched || editAutomovelForm.get('Veiculo')?.dirty) && !editAutomovelForm.get('Veiculo')?.valid}">
+                  <span class="invalid-feedback">
+                      <span *ngIf="editAutomovelForm.get('Veiculo')?.errors?.['required']">Veículo não pode ficar em branco.</span>
+                  </span>
+              </div>
+              <input type="submit" value="Update" class="btn btn-primary" [disabled]="!editAutomovelForm.valid">
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="button" value="Delete" class="btn btn-danger"
+              (click)="deleteAutomovel(automovelDetails.id)">
+
+          </form>
+      </div>
+  </div>
+
+</div>
