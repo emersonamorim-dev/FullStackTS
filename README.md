@@ -10,14 +10,14 @@ Uso de biblioteca para customizar o Frontend com Material, NgPrime, NgBootstrap 
 - ng serve
 
 #### Principais Técnlogias utilizadas:
-Angular 15
-Typescript
-C#
-Microsoft SQL
-Jest
-HTML
-SCSS
-Docker
+- Angular 15
+- Typescript
+- C#
+- Microsoft SQL
+- Jest
+- HTML
+- SCSS
+- Docker
 
 O componente AddPessoaComponent, apresentado é um componente em Angular chamado que é responsável por exibir uma interface para adicionar novas pessoas ao sistema. Ele é composto por uma classe com variáveis, métodos e um construtor.
 
