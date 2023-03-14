@@ -1,6 +1,6 @@
 # Frontend TS
 
-Codificação em Angular programando em TypeScript para consumo de Backend programado em C# com Banco de Dados Microsoft SQL.
+Codificação em Angular 15 programado em TypeScript para consumo de Backend programado em C# com Banco de Dados Microsoft SQL.
 Uso de biblioteca para customizar o Frontend com Material, NgPrime, NgBootstrap e foi implementado Testes Unitários usando Jest para realização de Testes de Unidade.
 
 - Depois de feito isso basta rodar:
@@ -8,6 +8,16 @@ Uso de biblioteca para customizar o Frontend com Material, NgPrime, NgBootstrap 
 - npm install primeng --save
 - npm install primeicons --save
 - ng serve
+
+#### Principais Técnlogias utilizadas:
+Angular 15
+Typescript
+C#
+Microsoft SQL
+Jest
+HTML
+SCSS
+Docker
 
 O componente AddPessoaComponent, apresentado é um componente em Angular chamado que é responsável por exibir uma interface para adicionar novas pessoas ao sistema. Ele é composto por uma classe com variáveis, métodos e um construtor.
 
