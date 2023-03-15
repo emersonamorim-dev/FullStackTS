@@ -3,7 +3,7 @@
 Codificação em Angular 15 programado em TypeScript para consumo de Backend programado em C# com Banco de Dados Microsoft SQL.
 Uso de biblioteca para customizar o Frontend com Material, NgPrime, NgBootstrap e foi implementado Testes Unitários usando Jest para realização de Testes de Unidade.
 
-- Depois de feito isso basta rodar:
+- Depois instale os pacotes para rodar aplicação:
 - npm install
 - npm install primeng --save
 - npm install primeicons --save
