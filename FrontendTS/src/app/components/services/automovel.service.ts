@@ -12,9 +12,10 @@ import { Automovel } from '../models/Automovel';
 export class AutomovelService {
 
   baseApiUrl: string = environment.baseApiUrl;
+  private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' })
 
   // to talk to external api need an http client
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   public getAllAutomovel(): Observable<Automovel[]> {
     return this.http.get<Automovel[]>(this.baseApiUrl + '/api/Automovel');
@@ -35,7 +36,12 @@ export class AutomovelService {
       updatedAutomovelRequest);
   }
 
-  public deleteAutomovel(id: string): Observable<Automovel> {
-    return this.http.delete<Automovel>(this.baseApiUrl + '/api/Automovel/' + id);
+  public deleteAutomovel(id: Automovel['id']): Observable<Automovel> {
+    return this.http.delete<Automovel>(this.baseApiUrl + '/api/Automovel/' + id, {headers: this.httpHeaders})
+    .pipe( catchError( err => {
+      this.router.navigate(['/automovel/add'])
+      console.log(err.error.message);
+      return throwError(() => new Error(err))
+    } ))
   }
 }
