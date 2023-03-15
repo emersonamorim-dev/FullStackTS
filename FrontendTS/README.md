@@ -7,7 +7,7 @@ O componente AddPessoaComponent, apresentado é um componente em Angular chamado
 
 Para rodar a applicação é necessário configurar IP do Backend em: environment.ts
 
-##### Depois de feito isso basta rodar:
+##### Instale os pacotes para rodar aplicação:
 - npm install
 - npm install primeng --save
 - npm install primeicons --save
